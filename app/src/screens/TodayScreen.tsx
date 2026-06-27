@@ -6,13 +6,21 @@ import { CategoryChip } from '../components/CategoryChip';
 import logo from '../assets/logo.png';
 import productHero from '../assets/product-hero.png';
 
-const founderFirstName = 'Sarah';
+const founderFirstName = 'Melissa';
 
 function formatEyebrowDate(date: Date) {
   return date
     .toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })
     .toUpperCase()
     .replace(',', ' ·');
+}
+
+function getGreeting(date: Date): string {
+  const hour = date.getHours();
+  if (hour < 5) return 'Good night';
+  if (hour < 12) return 'Good morning';
+  if (hour < 17) return 'Good afternoon';
+  return 'Good evening';
 }
 
 export function TodayScreen() {
@@ -90,7 +98,7 @@ export function TodayScreen() {
           color: 'var(--color-green-deep)',
         }}
       >
-        Good morning, {founderFirstName}.
+        {getGreeting(today)}, {founderFirstName}.
       </h1>
 
       <p style={{ margin: '0 0 18px', fontSize: 14, color: 'var(--color-body-subtext)', lineHeight: 1.5 }}>

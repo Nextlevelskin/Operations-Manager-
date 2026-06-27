@@ -30,3 +30,27 @@ export interface Contact {
 }
 
 export type Urgency = 'overdue' | 'today' | 'soon' | 'none';
+
+export type TaskCategory = 'Follow-up' | 'Content' | 'Massage' | 'Finance' | 'Event';
+
+export interface WeekTask {
+  id: string;
+  date: string;
+  label: string;
+  category: TaskCategory;
+  contactId?: string;
+  done: boolean;
+}
+
+export type ContentPlatform = 'Instagram' | 'TikTok' | 'Email';
+export type ContentStatus = 'Ready' | 'Scheduled' | 'Draft' | 'Idea';
+
+export interface ContentPost {
+  id: string;
+  title: string;
+  platform: ContentPlatform;
+  status: ContentStatus;
+  scheduledAt: string;
+  isProduct: boolean;
+  reminderOn: boolean;
+}

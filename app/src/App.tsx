@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { TabBar, type Tab } from './components/TabBar';
 import { TodayScreen } from './screens/TodayScreen';
+import { WeekScreen } from './screens/WeekScreen';
+import { ContactsScreen } from './screens/ContactsScreen';
+import { ContentScreen } from './screens/ContentScreen';
 
 function App() {
   const [tab, setTab] = useState<Tab>('today');
@@ -26,21 +29,12 @@ function App() {
       >
         <main style={{ flex: 1, overflowY: 'auto' }}>
           {tab === 'today' && <TodayScreen />}
-          {tab === 'week' && <Placeholder title="Week" />}
-          {tab === 'contacts' && <Placeholder title="Contacts" />}
-          {tab === 'content' && <Placeholder title="Content" />}
+          {tab === 'week' && <WeekScreen />}
+          {tab === 'contacts' && <ContactsScreen />}
+          {tab === 'content' && <ContentScreen />}
         </main>
         <TabBar active={tab} onChange={setTab} />
       </div>
-    </div>
-  );
-}
-
-function Placeholder({ title }: { title: string }) {
-  return (
-    <div style={{ padding: '40px 22px', textAlign: 'center', color: 'var(--color-body-subtext)' }}>
-      <p style={{ fontFamily: 'var(--font-display)', fontSize: 22, color: 'var(--color-green-deep)' }}>{title}</p>
-      <p>Coming soon.</p>
     </div>
   );
 }
