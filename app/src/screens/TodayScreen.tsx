@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { mockContacts } from '../data/mockContacts';
+import { useContacts } from '../contexts/ContactsContext';
 import { getUrgency, urgencyColor, urgencyLabel } from '../data/urgency';
 import { Avatar } from '../components/Avatar';
 import { CategoryChip } from '../components/CategoryChip';
@@ -24,10 +24,11 @@ function getGreeting(date: Date): string {
 }
 
 export function TodayScreen() {
+  const { contacts } = useContacts();
   const today = useMemo(() => new Date(), []);
 
   const { needsToday, comingUp } = useMemo(() => {
-    const withUrgency = mockContacts.map((c) => ({ contact: c, urgency: getUrgency(c.nextFollowup, today) }));
+    const withUrgency = contacts.map((c) => ({ contact: c, urgency: getUrgency(c.nextFollowup, today) }));
     const needs = withUrgency
       .filter((c) => c.urgency === 'overdue' || c.urgency === 'today')
       .sort((a, b) => new Date(a.contact.nextFollowup).getTime() - new Date(b.contact.nextFollowup).getTime());
@@ -35,7 +36,7 @@ export function TodayScreen() {
       .filter((c) => c.urgency === 'soon')
       .sort((a, b) => new Date(a.contact.nextFollowup).getTime() - new Date(b.contact.nextFollowup).getTime());
     return { needsToday: needs, comingUp: soon };
-  }, [today]);
+  }, [contacts, today]);
 
   const tasksToday = 2;
 
