@@ -1,0 +1,59 @@
+:root {
+  /* Colors */
+  --color-brand-green: #305536;
+  --color-green-deep: #2B3A2E;
+  --color-green-mid: #3C6450;
+  --color-cream-bg: #F5F0E6;
+  --color-card-surface: #FFFDF8;
+  --color-warm-panel: #F3ECDD;
+  --color-tabbar-bg: #FBF8F0;
+  --color-muted-label: #8A8576;
+  --color-faint-label: #A89F8C;
+  --color-placeholder: #B3AC9C;
+  --color-body-subtext: #6E7268;
+  --color-body-text: #45493E;
+  --color-body-text-2: #5E6253;
+  --color-on-green-text: #EDF1E8;
+  --color-on-green-text-2: #F2F5ED;
+  --color-soft-green-tint: #DFEAE1;
+  --color-soft-green-tint-2: #E8F0E9;
+
+  /* Category accents */
+  --cat-wholesale-bg: #EFE6D4;
+  --cat-wholesale-text: #8A6A33;
+  --cat-wholesale-dot: #B59243;
+  --cat-clinical-bg: #DEE8E1;
+  --cat-clinical-text: #3C6450;
+  --cat-clinical-dot: #3C6450;
+  --cat-partnership-bg: #ECE0E5;
+  --cat-partnership-text: #7B566A;
+  --cat-partnership-dot: #9A7488;
+  --cat-massage-bg: #F0E3DD;
+  --cat-massage-text: #9C5E4C;
+  --cat-massage-dot: #B5715C;
+
+  /* Urgency */
+  --urgency-overdue: #B05A3C;
+  --urgency-today: #305536;
+  --urgency-soon: #9A9486;
+
+  /* Fonts */
+  --font-display: 'Cormorant Garamond', serif;
+  --font-ui: 'Mulish', sans-serif;
+
+  /* Radii */
+  --radius-card: 18px;
+  --radius-pill: 14px;
+  --radius-chip: 8px;
+
+  /* Shadows */
+  --shadow-card: 0 2px 10px -6px rgba(40, 50, 40, 0.25);
+  --shadow-primary-btn: 0 10px 24px -10px rgba(48, 85, 54, 0.7);
+  --shadow-phone-frame: 0 40px 90px -30px rgba(40, 50, 40, 0.55);
+
+  /* Spacing */
+  --space-screen-x: 22px;
+  --space-card: 14px;
+  --space-list-gap: 10px;
+  --space-section-gap: 24px;
+}
