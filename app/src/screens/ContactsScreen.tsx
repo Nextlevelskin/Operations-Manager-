@@ -13,6 +13,7 @@ const FILTERS: { value: FilterValue; label: string }[] = [
   { value: 'all', label: 'All' },
   { value: 'wholesale', label: categoryLabel.wholesale },
   { value: 'clinical', label: categoryLabel.clinical },
+  { value: 'partnership', label: categoryLabel.partnership },
   { value: 'press', label: categoryLabel.press },
 ];
 

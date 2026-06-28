@@ -1,6 +1,6 @@
 import type { Contact, ContactCategory, ContactStatus } from './types';
 
-const CATEGORY_VALUES: ContactCategory[] = ['wholesale', 'clinical', 'press'];
+const CATEGORY_VALUES: ContactCategory[] = ['wholesale', 'clinical', 'partnership', 'press'];
 const STATUS_VALUES: ContactStatus[] = [
   'Awaiting Outreach',
   'In Progress',

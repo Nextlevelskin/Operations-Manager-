@@ -3,6 +3,7 @@ import type { ContactCategory } from './types';
 export const categoryLabel: Record<ContactCategory, string> = {
   wholesale: 'Wholesale',
   clinical: 'Clinical',
+  partnership: 'Partnership',
   press: 'Press/PR',
 };
 
