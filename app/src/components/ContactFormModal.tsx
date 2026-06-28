@@ -50,8 +50,8 @@ export function ContactFormModal({ initial, onSave, onDelete, onClose }: Contact
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!values.name.trim() || !values.email.trim()) {
-      setError('Name and email are required.');
+    if (!values.name.trim()) {
+      setError('Name is required.');
       return;
     }
     onSave(values);
@@ -126,7 +126,7 @@ export function ContactFormModal({ initial, onSave, onDelete, onClose }: Contact
           />
         </div>
         <div>
-          <label style={labelStyle}>Email *</label>
+          <label style={labelStyle}>Email</label>
           <input
             style={inputStyle}
             type="email"

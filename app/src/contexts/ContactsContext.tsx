@@ -42,16 +42,21 @@ export function ContactsProvider({ children }: { children: ReactNode }) {
 
   const importContacts = useCallback((imported: Contact[]) => {
     setContacts((prev) => {
-      const byEmail = new Map(prev.map((c) => [c.email.toLowerCase(), c]));
+      const result = [...prev];
       for (const incoming of imported) {
-        const existing = byEmail.get(incoming.email.toLowerCase());
-        if (existing) {
-          byEmail.set(incoming.email.toLowerCase(), { ...existing, ...incoming, id: existing.id, history: existing.history });
+        const email = incoming.email.trim().toLowerCase();
+        const name = incoming.name.trim().toLowerCase();
+        const matchIndex = result.findIndex((c) =>
+          email ? c.email.trim().toLowerCase() === email : c.name.trim().toLowerCase() === name,
+        );
+        if (matchIndex >= 0) {
+          const existing = result[matchIndex];
+          result[matchIndex] = { ...existing, ...incoming, id: existing.id, history: existing.history };
         } else {
-          byEmail.set(incoming.email.toLowerCase(), incoming);
+          result.push(incoming);
         }
       }
-      return Array.from(byEmail.values());
+      return result;
     });
   }, []);
 

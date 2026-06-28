@@ -133,7 +133,7 @@ export function csvToContacts(text: string): ImportResult {
     const cells = rows[i];
     const name = (nameIdx >= 0 ? cells[nameIdx] : '')?.trim();
     const email = (emailIdx >= 0 ? cells[emailIdx] : '')?.trim();
-    if (!name || !email) {
+    if (!name) {
       skipped++;
       continue;
     }
