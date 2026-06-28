@@ -169,7 +169,7 @@ export function ContactsScreen() {
         >
           <div>
             Imported {importSummary.contacts.length} contact{importSummary.contacts.length === 1 ? '' : 's'}.
-            {importSummary.skipped > 0 && ` Skipped ${importSummary.skipped} missing a name or email.`}
+            {importSummary.skipped > 0 && ` Skipped ${importSummary.skipped} missing a name.`}
             {importSummary.defaultedCategory > 0 &&
               ` ${importSummary.defaultedCategory} given a default category.`}
             {importSummary.defaultedDate > 0 && ` ${importSummary.defaultedDate} given a default follow-up date.`}
