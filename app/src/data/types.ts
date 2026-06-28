@@ -1,10 +1,13 @@
 export type ContactCategory = 'wholesale' | 'clinical' | 'partnership' | 'massage';
 
 export type ContactStatus =
-  | 'Called — left voicemail'
-  | 'Responded — in progress'
-  | 'Booked / confirmed'
-  | 'Not a fit right now';
+  | 'Awaiting Outreach'
+  | 'In Progress'
+  | 'Follow-up Due'
+  | 'Follow-up Sent'
+  | 'Awaiting Response'
+  | 'Response Received'
+  | 'Active Partner';
 
 export interface HistoryEntry {
   date: string;

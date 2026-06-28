@@ -17,7 +17,7 @@ export const mockContacts: Contact[] = [
     firstContact: daysFromToday(-40),
     lastContact: daysFromToday(-11),
     nextFollowup: daysFromToday(-4),
-    status: 'Responded — in progress',
+    status: 'In Progress',
     notes: 'Wants samples of the calendula line before committing to a first wholesale order.',
     history: [
       { date: daysFromToday(-40), note: 'Introduced the brand at the local market.' },
@@ -38,7 +38,7 @@ export const mockContacts: Contact[] = [
     firstContact: daysFromToday(-60),
     lastContact: daysFromToday(-14),
     nextFollowup: daysFromToday(0),
-    status: 'Called — left voicemail',
+    status: 'Follow-up Sent',
     notes: 'Interested in a clinical-grade lavender balm for post-treatment care.',
     history: [
       { date: daysFromToday(-60), note: 'Met at the wellness expo.' },
@@ -80,7 +80,7 @@ export const mockContacts: Contact[] = [
     firstContact: daysFromToday(-90),
     lastContact: daysFromToday(-20),
     nextFollowup: daysFromToday(2),
-    status: 'Booked / confirmed',
+    status: 'Active Partner',
     notes: 'Prefers evening appointments, deep tissue focus.',
     history: [
       { date: daysFromToday(-90), note: 'First session booked.' },
@@ -101,7 +101,7 @@ export const mockContacts: Contact[] = [
     firstContact: daysFromToday(-15),
     lastContact: daysFromToday(-2),
     nextFollowup: daysFromToday(6),
-    status: 'Responded — in progress',
+    status: 'In Progress',
     notes: 'Considering a recurring contract for in-office treatments.',
     history: [{ date: daysFromToday(-2), note: 'Discussed contract terms over the phone.' }],
     topic: 'recurring contract',
