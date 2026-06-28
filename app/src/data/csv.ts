@@ -1,6 +1,6 @@
 import type { Contact, ContactCategory, ContactStatus } from './types';
 
-const CATEGORY_VALUES: ContactCategory[] = ['wholesale', 'clinical', 'partnership', 'massage'];
+const CATEGORY_VALUES: ContactCategory[] = ['wholesale', 'clinical', 'press'];
 const STATUS_VALUES: ContactStatus[] = [
   'Awaiting Outreach',
   'In Progress',
@@ -90,6 +90,7 @@ export function contactsToCsv(contacts: Contact[]): string {
 }
 
 function categoryDisplay(category: ContactCategory): string {
+  if (category === 'press') return 'Press/PR';
   return category.charAt(0).toUpperCase() + category.slice(1);
 }
 
@@ -138,9 +139,10 @@ export function csvToContacts(text: string): ImportResult {
     }
 
     const rawCategory = (categoryIdx >= 0 ? cells[categoryIdx] : '')?.trim().toLowerCase();
+    const normalizedCategory = rawCategory === 'press/pr' ? 'press' : rawCategory;
     let category: ContactCategory = 'wholesale';
-    if (rawCategory && (CATEGORY_VALUES as string[]).includes(rawCategory)) {
-      category = rawCategory as ContactCategory;
+    if (normalizedCategory && (CATEGORY_VALUES as string[]).includes(normalizedCategory)) {
+      category = normalizedCategory as ContactCategory;
     } else {
       defaultedCategory++;
     }

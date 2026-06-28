@@ -3,8 +3,7 @@ import type { ContactCategory } from './types';
 export const categoryLabel: Record<ContactCategory, string> = {
   wholesale: 'Wholesale',
   clinical: 'Clinical',
-  partnership: 'Partnership',
-  massage: 'Massage',
+  press: 'Press/PR',
 };
 
 export function categoryStyle(category: ContactCategory) {

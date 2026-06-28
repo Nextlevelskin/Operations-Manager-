@@ -31,6 +31,9 @@
   --cat-massage-bg: #F0E3DD;
   --cat-massage-text: #9C5E4C;
   --cat-massage-dot: #B5715C;
+  --cat-press-bg: #DCE3EC;
+  --cat-press-text: #3F5876;
+  --cat-press-dot: #5D7796;
 
   /* Urgency */
   --urgency-overdue: #B05A3C;

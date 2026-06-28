@@ -1,4 +1,4 @@
-export type ContactCategory = 'wholesale' | 'clinical' | 'partnership' | 'massage';
+export type ContactCategory = 'wholesale' | 'clinical' | 'press';
 
 export type ContactStatus =
   | 'Awaiting Outreach'
