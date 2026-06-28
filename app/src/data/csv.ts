@@ -2,10 +2,13 @@ import type { Contact, ContactCategory, ContactStatus } from './types';
 
 const CATEGORY_VALUES: ContactCategory[] = ['wholesale', 'clinical', 'partnership', 'massage'];
 const STATUS_VALUES: ContactStatus[] = [
-  'Called — left voicemail',
-  'Responded — in progress',
-  'Booked / confirmed',
-  'Not a fit right now',
+  'Awaiting Outreach',
+  'In Progress',
+  'Follow-up Due',
+  'Follow-up Sent',
+  'Awaiting Response',
+  'Response Received',
+  'Active Partner',
 ];
 
 export const CSV_COLUMNS = [
